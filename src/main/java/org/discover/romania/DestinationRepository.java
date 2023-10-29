@@ -1,4 +1,8 @@
-package org.discover.romania.domain;
+package org.discover.romania;
+
+import org.discover.romania.domain.Destination;
+import org.discover.romania.domain.Neighbourhood;
+import org.discover.romania.domain.Region;
 
 import java.util.List;
 

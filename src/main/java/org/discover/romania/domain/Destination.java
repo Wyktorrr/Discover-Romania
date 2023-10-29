@@ -21,4 +21,9 @@ public class Destination extends Experience{
         this.city = city;
         this.neighbourhood = neighbourhood;
     }
+
+    @Override
+    public String getExperienceDescription() {
+        return String.format("Destination given by region %s, city %s, and neighbourhood %s", region, city, neighbourhood);
+    }
 }
