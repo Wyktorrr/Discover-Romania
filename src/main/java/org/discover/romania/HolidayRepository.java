@@ -1,13 +1,15 @@
 package org.discover.romania;
 
-import org.discover.romania.domain.Destination;
-import org.discover.romania.domain.Holiday;
+import lombok.Getter;
+import org.discover.romania.domain.*;
 
+import java.time.Period;
 import java.util.Collections;
 import java.util.List;
 
 import static java.util.Arrays.asList;
 
+@Getter
 public class HolidayRepository {
 
     private List<Destination> availableDestinations;
@@ -25,4 +27,10 @@ public class HolidayRepository {
     public HolidayRepository(List<Destination> availableDestinations) {
         this.availableDestinations = availableDestinations;
     }
+
+    Holiday holidayBucharest = Holiday.builder()
+            .destination(Destination.builder().city(City.BUCHAREST).neighbourhood(Neighbourhood.OLD_TOWN_BUCHAREST).region(Region.MUNTENIA).build())
+            .period(Period.ofDays(2))
+            .build();
+
 }

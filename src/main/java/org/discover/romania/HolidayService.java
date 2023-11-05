@@ -5,6 +5,7 @@ import org.discover.romania.domain.City;
 import org.discover.romania.domain.Destination;
 
 import java.time.Instant;
+import java.time.Period;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Date;
@@ -22,7 +23,7 @@ public class HolidayService {
         return BashHoliday.builder()
                 .items(
                         holidayRepository.listAvailableHolidays().stream()
-                                .filter(p -> p.getDestination().getCity().equals(City.BRASOV))
+                                //.filter(p -> p.getPeriod())
                                 .map(p -> BashHoliday.HolidayItems.builder()
                                         .description(p.getDescription())
                                         .build())
