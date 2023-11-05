@@ -17,6 +17,7 @@ public class Holiday extends Experience{
     @Builder
     private Holiday(Destination destination, List<Destination> availableDestinations, Period period) {
         super();
+        this.destination = destination;
         this.availableDestinations = availableDestinations;
         this.period = period;
     }

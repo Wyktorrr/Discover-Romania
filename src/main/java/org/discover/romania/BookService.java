@@ -8,7 +8,7 @@ import java.util.List;
 public class BookService {
     private static final List<Traveler> travelers = new ArrayList<>();
 
-    public void addCustomer(Traveler traveler) {
+    public static void addTraveler(Traveler traveler) {
         travelers.add(traveler);
     }
 }
