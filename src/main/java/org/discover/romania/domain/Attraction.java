@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Attraction extends Experience{
+public class Attraction extends Experience {
     private String attraction;
     private Destination destination;
 

@@ -16,6 +16,7 @@ public class Main {
     //private static final List<Destination> destinationTest = DestinationRepository.availableDestination.stream().filter(region -> region.equals(TRANSILVANIA)).filter(city -> city.equals(BRASOV)).collect(Collectors.toList());
     //private static final HolidayRepository holidayRepository = new HolidayRepository(destinationTest);
     private static final HolidayService holidayService = new HolidayService();
+    private static  final BookService bookService = new BookService();
 
 
 
@@ -26,6 +27,7 @@ public class Main {
         Traveler traveler1 = Traveler.builder().name("Victor").email("testVic@email.com").telephoneNumber("07358888").build();
         BookService.addTraveler(traveler1);
 
+        //BashBooking bashBooking = bookService.createBooking();
         BashHoliday bashHoliday = holidayService.createHoliday();
         System.out.println(bashHoliday);
 
