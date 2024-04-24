@@ -5,11 +5,10 @@ import lombok.*;
 import java.util.Date;
 import java.util.List;
 
-
 @Builder
 @Data
 public class BashHoliday {
-    private List<HolidayItems> items;
+    private List<HolidayItem> items;
     private Date createdAt;
     private Date validUntil;
     private Date lastUpdatedAt;
@@ -19,14 +18,17 @@ public class BashHoliday {
     @ToString
     @Getter
     @Setter
-    public static final class HolidayItems implements Comparable {
+    public final static class HolidayItem implements Comparable {
 
-        private String description;
         private Long price;
+        private String descriptionOfHolidayItem;
+        private String city;
+        private List<String> tips;
+        private List<String> stories;
 
         @Override
         public int compareTo(Object o) {
-            return description.compareTo(((HolidayItems) o).description);
+            return descriptionOfHolidayItem.compareTo(((HolidayItem) o).descriptionOfHolidayItem);
         }
     }
 }

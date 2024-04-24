@@ -1,12 +1,18 @@
 package org.discover.romania.domain;
 
+import lombok.Getter;
+
+@Getter
 public enum City {
-    BUCHAREST("Bucharest"),
-    BRASOV("Brasov");
 
-    public final String city_name;
+    BUCHAREST("Bucharest", "B"),
+    BRASOV("Brasov", "BV");
 
-    private City(String city_name) {
-        this.city_name = city_name;
+    City(String cityName, String cityId) {
+        this.cityName = cityName;
+        this.cityId = cityId;
     }
+
+    private final String cityName;
+    private final String cityId;
 }

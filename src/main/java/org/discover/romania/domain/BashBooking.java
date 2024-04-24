@@ -2,7 +2,6 @@ package org.discover.romania.domain;
 
 import lombok.*;
 
-import java.time.Period;
 import java.util.Date;
 import java.util.List;
 
@@ -19,16 +18,14 @@ public class BashBooking {
     @Getter
     @Setter
     public static final class BookingItems implements Comparable {
-
-        private Destination destination;
-        private Date date;
-        private Period period;
-        private Traveler traveler;
-
+        private String travelerName;
+        private String travelerEmail;
+        private String preferredLanguage;
+        private String destination;
 
         @Override
         public int compareTo(Object o) {
-            return traveler.toString().compareTo(String.valueOf(((BookingItems) o).traveler));
+            return travelerName.compareTo(((BookingItems) o).travelerName);
         }
     }
 }

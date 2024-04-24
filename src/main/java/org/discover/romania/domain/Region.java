@@ -1,14 +1,15 @@
 package org.discover.romania.domain;
 
 public enum Region {
-    MUNTENIA("Muntenia"),
-    DOBROGEA("Dobrogea"),
+    MUNTENIA("Muntenia", "muntenia"),
+    DOBROGEA("Dobrogea", "dobrogea"),
+    TRANSILVANIA("Transilvania", "transilvania");
 
-    TRANSILVANIA("Transilvania");
+    public final String regionDescription;
+    public final String regionId;
 
-    public final String region_description;
-
-    private Region(String region_description) {
-        this.region_description = region_description;
+    Region(String regionDescription, String regionId) {
+        this.regionDescription = regionDescription;
+        this.regionId = regionId;
     }
 }

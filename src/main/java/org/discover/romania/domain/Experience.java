@@ -9,6 +9,4 @@ public abstract class Experience {
     protected String description;
     protected List<String> tips;
     protected List<String> stories;
-
-    public abstract String getExperienceDescription();
 }

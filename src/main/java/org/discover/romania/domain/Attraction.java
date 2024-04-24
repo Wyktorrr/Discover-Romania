@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Attraction extends Experience {
-    private String attraction;
+    private String attractionName;
     private Destination destination;
 
     @Builder
@@ -17,7 +17,7 @@ public class Attraction extends Experience {
     }
 
     @Override
-    public String getExperienceDescription() {
-        return String.format("Attraction %s", attraction);
+    public String getDescription() {
+        return String.format("Attraction %s", attractionName);
     }
 }

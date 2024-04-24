@@ -4,11 +4,9 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.Period;
-
 @Getter
 @Setter
-public class Destination extends Experience{
+public class Destination extends Experience {
 
     private Region region;
     private City city;
@@ -23,7 +21,7 @@ public class Destination extends Experience{
     }
 
     @Override
-    public String getExperienceDescription() {
+    public String getDescription() {
         return String.format("Destination given by region %s, city %s, and neighbourhood %s", region, city, neighbourhood);
     }
 }
