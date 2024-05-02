@@ -29,7 +29,7 @@ public class Main {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.printf(format("Enter a value for the preferred language out of the following: %s", Stream.of(Language.values()).map(Language::getLanguageName).collect(Collectors.toList())));
+        System.out.println(format("Enter a value for the preferred language out of the following: %s", Stream.of(Language.values()).map(Language::getLanguageName).collect(Collectors.toList())));
 
         // Reading data using readLine
         String motherTongue = reader.readLine();
