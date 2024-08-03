@@ -12,7 +12,6 @@ import java.util.List;
 public class Holiday extends Experience {
     private Destination destination;
     private List<Destination> availableDestinations;
-    private List<String> tips;
     private Period period;
 
     @Builder
@@ -20,7 +19,6 @@ public class Holiday extends Experience {
         super();
         this.destination = destination;
         this.availableDestinations = availableDestinations;
-        this.tips = tips;
         this.period = period;
     }
 

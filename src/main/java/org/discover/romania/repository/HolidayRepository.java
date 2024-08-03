@@ -11,7 +11,7 @@ import java.util.Objects;
 @Getter
 public class HolidayRepository {
 
-    private static volatile HolidayRepository holidayRepositoryInstance = null;
+    private static HolidayRepository holidayRepositoryInstance = null;
 
     public static HolidayRepository getHolidayRepositoryInstance() {
         if (Objects.isNull(holidayRepositoryInstance)) {

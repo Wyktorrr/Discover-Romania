@@ -14,7 +14,7 @@ import static org.discover.romania.domain.Region.TRANSILVANIA;
 
 public class DestinationRepository {
 
-    private static volatile DestinationRepository destinationRepositoryInstance = null;
+    private static DestinationRepository destinationRepositoryInstance = null;
 
     public static DestinationRepository getDestinationRepositoryInstance() {
         if (Objects.isNull(destinationRepositoryInstance)) {
@@ -27,7 +27,7 @@ public class DestinationRepository {
         return destinationRepositoryInstance;
     }
 
-    public List<Destination> availableDestination = asList(Destination.builder().region(TRANSILVANIA).city(BRASOV).neighbourhood(BRASOV_HISTORICAL_CENTER).build(),
+    private List<Destination> availableDestination = asList(Destination.builder().region(TRANSILVANIA).city(BRASOV).neighbourhood(BRASOV_HISTORICAL_CENTER).build(),
             Destination.builder().city(BRASOV).region(Region.DOBROGEA) //currently working like this bcs no validations are added
                     .neighbourhood(Neighbourhood.BRASOV_HISTORICAL_CENTER).build());
 

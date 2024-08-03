@@ -6,13 +6,13 @@ import java.util.Date;
 import java.util.List;
 
 @Data
-public class Book {
+public class Booking {
     private Traveler traveler;
     private Date bookTime;
     private List<Holiday> bookedHolidays;
     private Date bookingTime;
 
-    public Book(Traveler traveler, Date bookTime, List<Holiday> bookedHolidays, Date bookingTime) {
+    public Booking(Traveler traveler, Date bookTime, List<Holiday> bookedHolidays, Date bookingTime) {
         this.traveler = traveler;
         this.bookTime = bookTime;
         this.bookedHolidays = bookedHolidays;

@@ -17,15 +17,15 @@ public class BashBooking {
     @ToString
     @Getter
     @Setter
-    public static final class BookingItems implements Comparable {
+    public static final class BookingItems implements Comparable<Traveler> {
         private String travelerName;
         private String travelerEmail;
         private String preferredLanguage;
         private String destination;
 
         @Override
-        public int compareTo(Object o) {
-            return travelerName.compareTo(((BookingItems) o).travelerName);
+        public int compareTo(Traveler traveler) {
+            return travelerEmail.compareTo(traveler.getEmail());
         }
     }
 }

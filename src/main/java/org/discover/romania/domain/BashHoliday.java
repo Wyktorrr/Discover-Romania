@@ -8,7 +8,7 @@ import java.util.List;
 @Builder
 @Data
 public class BashHoliday {
-    private List<HolidayItem> items;
+    private List<HolidayItem> holidayItems;
     private Date createdAt;
     private Date validUntil;
     private Date lastUpdatedAt;
@@ -18,7 +18,7 @@ public class BashHoliday {
     @ToString
     @Getter
     @Setter
-    public final static class HolidayItem implements Comparable {
+    public static final class HolidayItem implements Comparable<HolidayItem> {
 
         private Long price;
         private String descriptionOfHolidayItem;
@@ -27,8 +27,8 @@ public class BashHoliday {
         private List<String> stories;
 
         @Override
-        public int compareTo(Object o) {
-            return descriptionOfHolidayItem.compareTo(((HolidayItem) o).descriptionOfHolidayItem);
+        public int compareTo(HolidayItem holidayItem) {
+            return descriptionOfHolidayItem.compareTo(holidayItem.descriptionOfHolidayItem);
         }
     }
 }
